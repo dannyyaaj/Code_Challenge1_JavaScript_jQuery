@@ -9,19 +9,28 @@ function docReady() {
 function handleEvents() {
   $('.generateBtn').on('click', makeDiv);
   $('.generateBtn').on('click', countClick);
+  $('main').on('click', '.swapBtn', changeBackgroundColor);
+  $('main').on('click', '.deleteBtn', removeDiv);
 }
 
 function countClick() {
   clickCount++
-
   return clickCount
 }
 
 function makeDiv() {
-  let newDiv = $('<div class="bgRed"></div>');
+  let newDiv = $('<div class="newDiv bgRed"></div>');
   $('main').append(newDiv);
-  $('main').append($(`<button class = "deleteButton"> Swap </button>`));
-  $('main').append($(`<button class = "deleteButton"> Delete </button>`));
-  newDiv.append(`<p class="count">${clickCount}</p>`)
+  $(newDiv).append($(`<button class ="swapBtn"> Swap </button>`));
+  $(newDiv).append($(`<button class = "deleteBtn"> Delete </button>`));
+  newDiv.prepend(`<p class="count">${clickCount}</p>`)
+}
 
+function changeBackgroundColor() {
+  $(this).parent().toggleClass('bgRed');
+  $(this).parent().toggleClass('bgYellow');
+}
+
+function removeDiv() {
+  $(this).parent().remove();
 }
