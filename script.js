@@ -16,7 +16,7 @@ function makeDiv() {
   const newDiv = $('<div class="newDiv bgRed"></div>');
   $('main').append(newDiv);
   $(newDiv).append($(`<button class ="swapBtn btn btn-light">Swap Colors</button>`));
-  $(newDiv).append($(`<button class = "deleteBtn btn btn-dark">Delete</button>`));
+  $(newDiv).append($(`<button class = "deleteBtn btn btn-dark float-right">Delete</button>`));
   newDiv.prepend(`<p class="count">${clickCount}</p>`)
 }
 
