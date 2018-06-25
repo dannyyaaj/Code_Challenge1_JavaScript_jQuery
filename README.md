@@ -1,1 +1,2 @@
-# Code_Challenge1_JavaScript_jQuery
+
+# This repo contains the first JavaScript and jQuery coding challenge.
