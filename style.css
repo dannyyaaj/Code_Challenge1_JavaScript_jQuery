@@ -1,3 +1,11 @@
 button {
   margin: 0 1rem;
 }
+
+.bgRed {
+  background: red;
+}
+
+.bgYellow {
+  background: yellow;
+}

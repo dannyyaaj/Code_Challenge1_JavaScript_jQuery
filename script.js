@@ -18,7 +18,7 @@ function countClick() {
 }
 
 function makeDiv() {
-  let newDiv = $('<div></div>');
+  let newDiv = $('<div class="bgRed"></div>');
   $('main').append(newDiv);
   $('main').append($(`<button class = "deleteButton"> Swap </button>`));
   $('main').append($(`<button class = "deleteButton"> Delete </button>`));
