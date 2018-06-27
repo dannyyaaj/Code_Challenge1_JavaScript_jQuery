@@ -7,7 +7,6 @@ function docReady() {
 
 function handleEvents() {
   $('.generateBtn').on('click', makeDiv);
-  $('.generateBtn').on('click', countClick);
   $('main').on('click', '.swapBtn', changeBackgroundColor);
   $('main').on('click', '.deleteBtn', removeDiv);
 }
@@ -17,12 +16,14 @@ function makeDiv() {
   $('main').append(newDiv);
   $(newDiv).append($(`<button class ="swapBtn btn btn-light">Swap Colors</button>`));
   $(newDiv).append($(`<button class = "deleteBtn btn btn-dark float-right">Delete</button>`));
-  newDiv.prepend(`<p class="count">${clickCount}</p>`)
+  newDiv.prepend(`<p class="count">${clickCount}</p>`);
+
+  countClick();
 }
 
 function countClick() {
-  clickCount++
-  return clickCount
+  clickCount++;
+  return clickCount;
 }
 
 function changeBackgroundColor() {
